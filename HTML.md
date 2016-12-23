@@ -50,11 +50,5 @@ HTML5的离线储存怎么使用，工作原理能不能解释一下？
 如何在页面上实现一个圆形的可点击区域？
 
 实现不使用 border 画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。
-
-* 网页验证码是干嘛的，是为了解决什么安全问题？  
-  防止机器人批量注册、登录、灌水  
-* tite与h1的区别、b与strong的区别、i与em的区别？
-  一个网站只会有一个标题 多个H1会稀释主题 支持多title 且title权重大于h1 爬虫易于获取利于seo  
-  <b>（Bold）<i>（Italic）视觉要素（presentationl elements）无意义加粗 斜体 `物理标记`
-  <em>（emphasized text）和 <strong>（strong emphasized text）是表达要素(phrase elements) 语义化 `逻辑标记`  
+ 
   
