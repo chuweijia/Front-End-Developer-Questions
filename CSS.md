@@ -125,23 +125,25 @@ html{
 
 `display: inline-block;`  
 >  inline-block既具有block的宽高特性又具有inline的同行元素特性  
-   inline-block会形成一个`BFC`  待了解
+   inline-block会形成一个`BFC`  待了解  
+   
     
 `display: table;`  
-> 作为块级表格显示
-display: inline-table;
-`display: table-cell;`  
-display: table-column;
-display: table-column-group;
-display: table-footer-group;
-display: table-header-group;
-display: table-row;
-display: table-row-group;
-display: table-caption;  
+> 作为块级表格显示  
 
-display: inline-list-item;
+
+display: inline-table;  
+`display: table-cell;`   
+display: table-column;  
+display: table-column-group;  
+display: table-footer-group;  
+display: table-header-group;  
+display: table-row;  
+display: table-row-group;  
+display: table-caption;  
+display: inline-list-item;  
 `display: flex;`  
-> 设为Flex布局以后，子元素的float、clear和vertical-align属性将失效  
+> 设为Flex布局以后，子元素的float、clear和vertical-align属性将失效   
 `display: box;`  
 > Flexbox的兼容性问题会有叙述  
 `display: inline-flex;`  
@@ -175,6 +177,7 @@ CSS3有哪些新特性？
   `flex-direction(方向)`  
   > flex-direction: row(起点左) | row-reverse | column（起点上） | column-reverse;  
   
+  
   `flex-wrap（换行方式）`  
   > flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
   
@@ -188,13 +191,15 @@ CSS3有哪些新特性？
     
     
   `align-items竖轴`  
-  > align-items: flex-start | flex-end | center | baseline | stretch; 
-    box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
+  >  align-items: flex-start | flex-end | center | baseline | stretch;   
+     box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
     
     
     
-  `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用  
-  > align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
+  `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用   
+  >  align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
+  
+  
   
   
   
