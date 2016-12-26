@@ -175,17 +175,17 @@ CSS3有哪些新特性？
 
 * 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？  
   `flex-direction(方向)`  
-  > flex-direction: row(起点左) | row-reverse | column（起点上） | column-reverse;  
+  >  flex-direction: row(起点左) | row-reverse | column（起点上） | column-reverse;  
   
   
   `flex-wrap（换行方式）`  
-  > flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
+  >  flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
   
   `flex-flow(方向+换行方式)`  
-  > flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）  
+  >  flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）  
   
   `justify-content横轴`  
-  > justify-content: flex-start | flex-end | center | space-between | space-around;  
+  >  justify-content: flex-start | flex-end | center | space-between | space-around;  
     box-pack:start(defalut) | end | center | justify  `兼容Android4.3-`  
     
     
@@ -194,9 +194,6 @@ CSS3有哪些新特性？
   >  align-items: flex-start | flex-end | center | baseline | stretch;   
      box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
     
-    `align-items竖轴`  
-  >  align-items: flex-start | flex-end | center | baseline | stretch;   
-     box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
      
   `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用   
   >  align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
