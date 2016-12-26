@@ -145,7 +145,8 @@ display: inline-list-item;
 `display: flex;`  
 > 设为Flex布局以后，子元素的float、clear和vertical-align属性将失效   
 `display: box;`  
-> Flexbox的兼容性问题会有叙述  
+> Flexbox的兼容性问题会有叙述    
+
 `display: inline-flex;`  
 `display: grid;`  
 `display: inline-grid;`  
@@ -178,15 +179,15 @@ CSS3有哪些新特性？
   >  flex-direction: row(起点左) | row-reverse | column（起点上） | column-reverse;  
   
   
-  `flex-wrap（换行方式）`  
-  >  flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
+  `flex-wrap（换行方式）`    
+  >  flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
   
-  `flex-flow(方向+换行方式)`  
-  >  flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）  
+  `flex-flow(方向+换行方式)`    
+  >  flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）    
   
   `justify-content横轴`  
-  >  justify-content: flex-start | flex-end | center | space-between | space-around;  
-    box-pack:start(defalut) | end | center | justify  `兼容Android4.3-`  
+   >  justify-content: flex-start | flex-end | center | space-between | space-around;  
+      box-pack:start(defalut) | end | center | justify  `兼容Android4.3-`  
     
     
     
