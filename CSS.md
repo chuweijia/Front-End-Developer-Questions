@@ -192,7 +192,6 @@ CSS3有哪些新特性？
     
   `align-items竖轴`  
   >  align-items: flex-start | flex-end | center | baseline | stretch;   
-     box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
     
     
     
