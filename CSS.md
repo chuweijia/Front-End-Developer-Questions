@@ -192,9 +192,12 @@ CSS3有哪些新特性？
     
   `align-items竖轴`  
   >  align-items: flex-start | flex-end | center | baseline | stretch;   
+     box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
     
-    
-    
+    `align-items竖轴`  
+  >  align-items: flex-start | flex-end | center | baseline | stretch;   
+     box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
+     
   `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用   
   >align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
   
