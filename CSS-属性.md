@@ -1,7 +1,4 @@
-介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同的？
-
-CSS选择符有哪些？哪些属性可以继承？
-
+* CSS选择符有哪些？哪些属性可以继承？
 * CSS优先级算法如何计算？ 
 权重
 !important > style(1000) > #id(100) > .class(10) >　div(1)
@@ -73,11 +70,6 @@ CSS选择符有哪些？哪些属性可以继承？
    
    ![image](http://7xsk2q.com1.z0.glb.clouddn.com/CSS/css%E4%BC%AA.png)  
   
-
-
-* 如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？  
-  
-
 * display有哪些值？说明他们的作用。   
 `display: none;`  
 > 同$.hide() 不占位;  visibility:hidden; 占位  
@@ -170,9 +162,7 @@ display: unset;  
 
   
 
-* position的值relative和absolute定位原点是？
 
-CSS3有哪些新特性？
 
 * 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？  
   `flex-direction(方向)`  
@@ -183,7 +173,7 @@ CSS3有哪些新特性？
   >  flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
   
   `flex-flow(方向+换行方式)`    
-  >  flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）    
+  >  flex-flow: <flex-direction> || <flex-wrap>;（默认值为 row nowrap）    
   
   `justify-content横轴`  
    >  justify-content: flex-start | flex-end | center | space-between | space-around;  
@@ -204,48 +194,33 @@ CSS3有哪些新特性？
   
   
   
-用纯CSS创建一个三角形的原理是什么？
 
-一个满屏 品 字布局 如何设计?
 
-常见兼容性问题？
 
-li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？
 
-经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？
 
-为什么要初始化CSS样式。
 
-absolute的containing block计算方式跟正常流有什么不同？
 
-CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？
 
-position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？
 
-对BFC规范(块级格式化上下文：block formatting context)的理解？
 
-CSS权重优先级是如何计算的？
 
-请解释一下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式
 
-移动端的布局用过媒体查询吗？
 
-使用 CSS 预处理器吗？喜欢那个？
 
-CSS优化、提高性能的方法有哪些？
 
-浏览器是怎样解析CSS选择器的？
 
-在网页中的应该使用奇数还是偶数的字体？为什么呢？
 
-margin和padding分别适合什么场景使用？
 
-抽离样式模块怎么写，说出思路，有无实践经验？[阿里航旅的面试题]
 
-元素竖向的百分比设定是相对于容器的高度吗？
 
-全屏滚动的原理是什么？用到了CSS的那些属性？
 
-什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？
 
-视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）
+
+
+
+
+
+
+
+
