@@ -197,7 +197,7 @@ CSS3有哪些新特性？
     
     
   `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用   
-  >  align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
+  >align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
   
   
   
