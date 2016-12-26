@@ -79,10 +79,12 @@ CSS选择符有哪些？哪些属性可以继承？
   
 
 * display有哪些值？说明他们的作用。   
-`display: none;`同$.hide() 不占位;  visibility:hidden; 占位  
+`display: none;`  
+> 同$.hide() 不占位;  visibility:hidden; 占位  
 `display: inline;`  
 > text-align无效，设置了line-height会让inline元素居中   
-```
+```  
+设置inline元素同行消除间隙  
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,18 +113,22 @@ html{
   font-size:12px;
   letter-spacing: normal;/* 设置字母、字间距为0 */ 
   word-spacing: normal; /* 设置单词、字段间距为0 */
-}  ```  
+}   
+```   
 
 
-
-
-
-  
 `display: block;`  
+> 默认会继承父元素的宽度,并且独占一行,高度一般以子元素撑开的高度为准  
+
 `display: list-item;`  
+> 此属性默认会把元素作为列表显示，要完全模仿列表的话还需要加上 `list-style-position` `list-style-type`  
 
 `display: inline-block;`  
-`display: table;`  
+>  inline-block既具有block的宽高特性又具有inline的同行元素特性  
+   inline-block会形成一个`BFC`  待了解
+    
+`display: table;`  
+> 作为块级表格显示
 display: inline-table;
 `display: table-cell;`  
 display: table-column;
@@ -134,9 +140,11 @@ display: table-row-group;
 display: table-caption;  
 
 display: inline-list-item;
-`display: flex;`  
+`display: flex;`  
+> 设为Flex布局以后，子元素的float、clear和vertical-align属性将失效  
 `display: box;`  
-`display: inline-flex;`  
+> Flexbox的兼容性问题会有叙述  
+`display: inline-flex;`  
 `display: grid;`  
 `display: inline-grid;`  
 display: ruby;
@@ -148,21 +156,48 @@ display: ruby-text-container;
 display: contents;
 display: run-in;  
 
-`display: inherit;`  
-`display: initial;`  
-`display: unset;`  
+display: inherit;  
+display: initial;  
+display: unset;  
+`inherit` 继承  
+`initial` 初始化  
+`unset`  默认可继承，则值为inherit；否则值为initial  
+`revert` 若用户定义样式表中显式设置，则按此设置；否则，按照浏览器定义样式表中的样式设置；否则，等价于unset   
+`all` 表示重设除unicode-bidi和direction之外的所有CSS属性的属性值，取值只能是initial、inherit、unset和revert  
 
+  
 
-
-  
-
-position的值relative和absolute定位原点是？
+* position的值relative和absolute定位原点是？
 
 CSS3有哪些新特性？
 
 * 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？  
+  `flex-direction(方向)`  
+  > flex-direction: row(起点左) | row-reverse | column（起点上） | column-reverse;  
   
-
+  `flex-wrap（换行方式）`  
+  > flex-wrap: nowrap | wrap（换行起点在左,新行在下） | wrap-reverse（换行起点在左,新行在上）;   
+  
+  `flex-flow(方向+换行方式)`  
+  > flex-flow: <flex-direction> || <flex-wrap>）;（默认值为 row nowrap）  
+  
+  `justify-content横轴`  
+  > justify-content: flex-start | flex-end | center | space-between | space-around;  
+    box-pack:start(defalut) | end | center | justify  `兼容Android4.3-`  
+    
+    
+    
+  `align-items竖轴`  
+  > align-items: flex-start | flex-end | center | baseline | stretch; 
+    box-align:start | end | center | baseline | stretch(default)  `兼容Android4.3-`  
+    
+    
+    
+  `align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用  
+  > align-content: flex-start | flex-end | center | space-between | space-around | stretch;    
+  
+  
+  
 用纯CSS创建一个三角形的原理是什么？
 
 一个满屏 品 字布局 如何设计?
