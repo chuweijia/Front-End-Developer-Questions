@@ -75,15 +75,93 @@ CSS选择符有哪些？哪些属性可以继承？
   
 
 
-如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？
+* 如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？  
+  
 
-display有哪些值？说明他们的作用。
+* display有哪些值？说明他们的作用。   
+`display: none;`同$.hide() 不占位;  visibility:hidden; 占位  
+`display: inline;`  
+> text-align无效，设置了line-height会让inline元素居中   
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class="main">
+    <div class="test">zhan</div>
+    <div class="test">123</div>
+  </div>
+</body>
+</html>
+html{
+  -webkit-text-size-adjust:none;/* 使用webkit的私有属性，让字体大小不受设备终端的调整，可定义字体大小小于12px */
+}
+.main{
+  font-size:0;
+  *word-spacing:-1px;/* 使用word-spacing 修复 IE6、7 中始终存在的 1px 空隙，减少单词间的空白（即字间隔） */
+}
+.test{
+  display:inline;
+  width: 10000px;
+  height:10000px;
+  border:1px solid;
+  font-size:12px;
+  letter-spacing: normal;/* 设置字母、字间距为0 */ 
+  word-spacing: normal; /* 设置单词、字段间距为0 */
+}  ```  
+
+
+
+
+
+  
+`display: block;`  
+`display: list-item;`  
+
+`display: inline-block;`  
+`display: table;`  
+display: inline-table;
+`display: table-cell;`  
+display: table-column;
+display: table-column-group;
+display: table-footer-group;
+display: table-header-group;
+display: table-row;
+display: table-row-group;
+display: table-caption;  
+
+display: inline-list-item;
+`display: flex;`  
+`display: box;`  
+`display: inline-flex;`  
+`display: grid;`  
+`display: inline-grid;`  
+display: ruby;
+display: ruby-base;
+display: ruby-text;
+display: ruby-base-container;
+display: ruby-text-container;  
+
+display: contents;
+display: run-in;  
+
+`display: inherit;`  
+`display: initial;`  
+`display: unset;`  
+
+
+
+  
 
 position的值relative和absolute定位原点是？
 
 CSS3有哪些新特性？
 
-请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？
+* 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？  
+  
 
 用纯CSS创建一个三角形的原理是什么？
 
