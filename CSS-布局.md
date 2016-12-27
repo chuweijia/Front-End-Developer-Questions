@@ -96,7 +96,8 @@
      top、right、bottom、left、z-index等属性是无效的  
      
      
-  >  relative  
+  >  relative  
+  
   
      对象遵循正常文档流   
      占据文档空间  
@@ -106,7 +107,8 @@
      
      
     
-  >  absolute   
+  >  absolute  
+  
   
      脱离文档流  
      根据祖先类元素(父类以上)进行定位 且该祖先是`position为非static`方式的   
@@ -115,12 +117,14 @@
      如果使用absoulte或fixed定位的话，必须指定 left、right、 top、 bottom 属性中的至少一个，否则left/right/top/bottom属性会使用它们的默认值          auto ，这将导致对象遵从正常的HTML布局规则，在前一个对象之后立即被呈递，简单讲就是都变成relative，会占用文档空间(讲道理绝对定位已经脱离文档流)      祖先类的margin会让子类的absoulte跟着偏移，而padding却不会让子类的absoulte发生偏移。总结一下，就是absoulte是根据祖先类的`border`进行的定位  
      
      
-  >  fixed  
+  >  fixed    
+  
   
      同absolute   
      定位原点是窗口  
      
   >  z-index  
+  
   
      父子关系是无法用z-index来设定上下关系的，一定是子级在上父级在下  
      使用`static` 定位或`无position`定位的元素z-index属性是无效的  
