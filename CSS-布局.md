@@ -89,6 +89,7 @@
 * position的值relative和absolute定位原点是？  
 
   >  static   
+  
      对象遵循正常文档流   
      占据文档空间  
      positon的默认属性  
@@ -96,6 +97,7 @@
      
      
   >  relative  
+  
      对象遵循正常文档流   
      占据文档空间  
      加了top/bottom 会在正常文档流中偏移位置  文档空间`不会发生`偏移(后续元素依据top前的文档位置进行定位)  
@@ -105,6 +107,7 @@
      
     
   >  absolute   
+  
      脱离文档流  
      根据祖先类元素(父类以上)进行定位 且该祖先是`position为非static`方式的   
      relative和static方式在最外层时是以`body`标签为定位原点的 而absoulte方式在无父级是position非static定位时是以`html`作为原点定位  
@@ -113,10 +116,12 @@
      
      
   >  fixed  
+  
      同absolute   
      定位原点是窗口  
      
   >  z-index  
+  
      父子关系是无法用z-index来设定上下关系的，一定是子级在上父级在下  
      使用`static` 定位或`无position`定位的元素z-index属性是无效的  
      
