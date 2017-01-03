@@ -1,7 +1,7 @@
 ## 数据类型
 * 介绍JavaScript的基本数据类型。  
   ### typeof()  
-      返回值"undefined"	"boolean""string" "number" "object" "function"   
+  返回值"undefined""boolean""string" "number" "object" "function"   
   ### undefined  
       ```
       var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
@@ -92,27 +92,7 @@
 	  alert(typeof(mes2));//"undefined"  
 	  alert(typeof(mes));//"object" 据说这是一个bug  
 	```  
-	
-	
-	
-	```  
-	  Number(null);//0  
-	  Number(undefined);//NaN   
-	``` 
-	
-	
-	
-	```  
-	  null 和 undefined 没有这个方法  
-	  String(null);//"null"  
-	  String(undefined);//"undefined"  
-	```   
-	
-	
-   	```  
-	  若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)  
-	alert(null == undefined);//true undefined是派生于null的  
-	```  
+
 	
 	
 * javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
