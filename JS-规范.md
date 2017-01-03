@@ -2,9 +2,7 @@
 * 介绍JavaScript的基本数据类型。 
 
 
-  ### typeof()   
-  
-  返回值"undefined""boolean""string" "number" "object" "function"   
+   
   
   ### undefined  
   
