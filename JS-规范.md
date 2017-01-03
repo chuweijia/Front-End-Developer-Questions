@@ -21,7 +21,7 @@
       
       ``` 
       
-  ### Null  
+### Null  
   
       ```  
 	    var mes = null;//null值表示一个空对象指针！！
@@ -30,7 +30,7 @@
 	    //若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)
       
       ```  
-  ### boolean  
+### boolean  
   
       ```  
 	true false // True False 不是bool值而是字面量  
@@ -38,7 +38,7 @@
 	
         
       ``` 
-  ### Number  
+### Number  
   
       ```  
       
@@ -65,7 +65,7 @@
         
       ```  
       
-  ### String    
+### String    
   
       ```  
       
@@ -80,7 +80,7 @@
             String(undefined);//"undefined"
       
       ``` 
-  ### Object  
+### Object  
   
    ```  
         var o = new Object();
