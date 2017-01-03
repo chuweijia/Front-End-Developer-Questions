@@ -1,34 +1,44 @@
 ## 数据类型
-* 介绍JavaScript的基本数据类型。  
-  ### typeof()  
+* 介绍JavaScript的基本数据类型。 
+
+
+  ### typeof()   
+  
   返回值"undefined""boolean""string" "number" "object" "function"   
+  
   ### undefined  
-      ```
-      var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
-			//同var mes = undefined; 默认被动初始化值为undefined
-			alert(mes == undefined);//true;
-			var mes2
-			alert(typeof(mes));//"undefined"
-			alert(typeof(mes2));//"undefined"  
+  
+      ```  
+      	var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
+	//同var mes = undefined; 默认被动初始化值为undefined
+	alert(mes == undefined);//true;
+	var mes2
+	alert(typeof(mes));//"undefined"
+	alert(typeof(mes2));//"undefined"  
       
       ```  
       
   ### Null  
-      ```
-        var mes = null;//null值表示一个空对象指针！！
-		    alert(typeof(mes));//"object" 区分于上面六种
-		    alert(null == undefined);//true undefined是派生于null的
-		    //若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)
+  
+      ```  
+	    var mes = null;//null值表示一个空对象指针！！
+	    alert(typeof(mes));//"object" 区分于上面六种
+	    alert(null == undefined);//true undefined是派生于null的
+	    //若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)
       
       ```  
   ### boolean  
-      ```
-        true false // True False 不是bool值而是字面量
+  
+      ```  
+	true false // True False 不是bool值而是字面量  
         Boolean()//对应表在P26  
+	
         
       ``` 
   ### Number  
-      ```
+  
+      ```  
+      
         5.1 十进制八进制十六进制 --> 算术运算统统转为十进制数值 
 		    5.2 数值范围
 		            Number.MIN_VALUE(值为 5e-324) ~ Number.MAX_VALUE(值为 1.7976931348623157e+308)
@@ -39,23 +49,26 @@
             isNaN(0/0);//NaN   此函数会确认这个参数是否 "不是数值"
             isNaN(12/0);//Infinity  
             isNaN(-12/0);//-Infinity  
- 		    5.4 数值转换
- 		    		5.4.1 Number()
- 		    		      	Number(null);//0
- 		    		      	Number(undefined);//NaN
- 		    		      	Number("");//0
-							Number("123blue");//NaN
- 		    		5.4.2 parseInt()
- 		    				parseInt("");//NaN
-							parseInt("123blue");//123
- 		    		5.4.3 parseFloat()  
+	5.4 数值转换
+		5.4.1 Number()
+			Number(null);//0
+			Number(undefined);//NaN
+			Number("");//0
+			Number("123blue");//NaN
+		5.4.2 parseInt()
+				parseInt("");//NaN
+					parseInt("123blue");//123
+		5.4.3 parseFloat()  
         
-      ``` 
-  ### String  
-      ```
+      ```  
+      
+  ### String    
+  
+      ```  
+      
         6.1 支持'' 和 "" 
- 			    字符字面量 被当做一个字符来解析
- 			    var text = "This is \u03a3"; //text.length 为9 一个空格算一个字符
+	    字符字面量 被当做一个字符来解析
+	    var text = "This is \u03a3"; //text.length 为9 一个空格算一个字符
         6.2 toString()
             6.2.1 null 和 undefined 没有这个方法
             6.2.2 含参 2 8 10 16 代表进制转换
@@ -67,16 +80,17 @@
   ### Object  
   
    ```  
-      var o = new Object();
- 			constructor
- 			hasOwnProperty(propertyName);
- 			isPrototypeOf(object);
- 			propertyIsEnumerable(propertyName);
- 			toLocaleString();
- 			toString();
- 			valueOf();  
+        var o = new Object();
+	constructor
+	hasOwnProperty(propertyName);
+	isPrototypeOf(object);
+	propertyIsEnumerable(propertyName);
+	toLocaleString();
+	toString();
+	valueOf();  
       
-   ``` 
+   ```   
+   
    
 * 说说写JavaScript的基本规范？  
   
