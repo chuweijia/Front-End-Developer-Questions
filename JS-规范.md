@@ -114,25 +114,19 @@
    * Ajax 是什么? 如何创建一个Ajax？  
 ## 事件篇  
 * JQuery一个对象可以同时绑定多个事件，这是如何实现的？ 
-  
-  ```  
-  $( "#foo" ).bind( "mouseenter mouseleave", function() {
-    $( this ).toggleClass( "entered" );
-  });  
-  //暂时想不到了
-  ```  
+
+	  $( "#foo" ).bind( "mouseenter mouseleave", function() {
+	    $( this ).toggleClass( "entered" );
+	  });  
+	  //暂时想不到了
   
 * 关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？  
 
-  ```  
-  element.addEventListener(type,handler,false);//DOM2 IE9 FF Safari Chrome Opera
-  element.attachEvent("on"+type,handler);//IE Opera 
-  event.preventDefault();//阻止默认行为 当event.cancelable为true时
-  event.stopPropagation();//停止进一步冒泡 当event.cancelable为true时
-  ```  
-  
-  
-  
+	element.addEventListener(type,handler,false);//DOM2 IE9 FF Safari Chrome Opera
+	element.attachEvent("on"+type,handler);//IE Opera 
+	event.preventDefault();//阻止默认行为 当event.cancelable为true时
+	event.stopPropagation();//停止进一步冒泡 当event.cancelable为true时  
+	
 * 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡，你来说下会执行几次事件，然后会先执行冒泡还是捕获      
 
   document 往 target节点，`捕获前进`，遇到注册的捕获事件立即触发执行   
