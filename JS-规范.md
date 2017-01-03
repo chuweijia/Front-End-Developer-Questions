@@ -45,14 +45,17 @@
  
   
   ```  
-    		<ul id="ul">
-          <li id="li">
-          123
-          <a href="#" id="a">aaa</a>
-          </li>
-          <li>456</li>
-          <li>789</li>
-          123
+    <ul id="ul">
+      <li id="li">
+      123
+      <a href="#" id="a">aaa</a>
+      </li>
+      <li>456</li>
+      <li>789</li>
+      123
     </ul>    
   ```  
+  点击a 触发顺序 `ul捕获 li捕获 a捕获 a冒泡（a的注册顺序） li冒泡 ul冒泡`  
+  
+  
  
