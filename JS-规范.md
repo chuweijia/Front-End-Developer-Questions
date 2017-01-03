@@ -67,23 +67,22 @@
       
 ### String    
   
-      ```  
-      
-        6.1 支持'' 和 "" 
+   ```  
+	6.1 支持'' 和 "" 
 	    字符字面量 被当做一个字符来解析
 	    var text = "This is \u03a3"; //text.length 为9 一个空格算一个字符
-        6.2 toString()
-            6.2.1 null 和 undefined 没有这个方法
-            6.2.2 含参 2 8 10 16 代表进制转换
-        6.3 String()
-            String(null);//"null"
-            String(undefined);//"undefined"
-      
-      ``` 
+	6.2 toString()
+	    6.2.1 null 和 undefined 没有这个方法
+	    6.2.2 含参 2 8 10 16 代表进制转换
+	6.3 String()
+	    String(null);//"null"
+	    String(undefined);//"undefined"
+	    
+   ``` 
 ### Object  
   
    ```  
-        var o = new Object();
+	var o = new Object();
 	constructor
 	hasOwnProperty(propertyName);
 	isPrototypeOf(object);
