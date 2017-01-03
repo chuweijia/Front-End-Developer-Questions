@@ -6,41 +6,40 @@
  
 ### undefined  
   
-      ```  
-	  	 var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
+    ```  
+	var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
 
-		同var mes = undefined; 默认被动初始化值为undefined
+	同var mes = undefined; 默认被动初始化值为undefined
 
-		alert(mes == undefined);//true;
+	alert(mes == undefined);//true;
 
-		var mes2
+	var mes2
 
-		alert(typeof(mes));//"undefined"
+	alert(typeof(mes));//"undefined"
 
-		alert(typeof(mes2));//"undefined" 
+	alert(typeof(mes2));//"undefined" 
       
-      ``` 
+    ``` 
       
 ### Null  
   
-      ```  
-	    var mes = null;//null值表示一个空对象指针！！
-	    alert(typeof(mes));//"object" 区分于上面六种
-	    alert(null == undefined);//true undefined是派生于null的
-	    //若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)
+    ```  
+    var mes = null;//null值表示一个空对象指针！！
+    alert(typeof(mes));//"object" 区分于上面六种
+    alert(null == undefined);//true undefined是派生于null的
+    //若意在保存对象的变量还没有真正保存对象时 应明确让它先保存null值(null作为空指针惯例)
       
-      ```  
+    ```  
 ### boolean  
   
-      ```  
+    ```  
 	true false // True False 不是bool值而是字面量  
         Boolean()//对应表在P26  
 	
-        
-      ``` 
+    ``` 
 ### Number  
   
-      ```  
+    ```  
       
         5.1 十进制八进制十六进制 --> 算术运算统统转为十进制数值 
 		    5.2 数值范围
@@ -63,7 +62,8 @@
 					parseInt("123blue");//123
 		5.4.3 parseFloat()  
         
-      ```  
+    ```   
+    
       
 ### String    
   
