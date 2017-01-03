@@ -40,21 +40,16 @@
   target节点 往 document 方向，`冒泡前进`，遇到注册的冒泡事件立即触发  
   举个例子  
   
-  
-  
-  
-  ```     
-  
-  
-  <ul id="ul">
-        <li id="li">
-        123
-        <a href="#" id="a">aaa</a>
-        </li>
-        <li>456</li>
-        <li>789</li>
-        123
-  </ul>  
+  ```   
+    <ul id="ul">
+          <li id="li">
+          123
+          <a href="#" id="a">aaa</a>
+          </li>
+          <li>456</li>
+          <li>789</li>
+          123
+    </ul>  
   
   ```  
   
