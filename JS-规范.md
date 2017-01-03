@@ -2,11 +2,11 @@
 
 ### typeof 
 
-  返回值"undefined""boolean""string" "number" "object" "function"    
+	返回值"undefined""boolean""string" "number" "object" "function"    
  
 ### undefined  
   
-    ```  
+
 	var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
 
 	同var mes = undefined; 默认被动初始化值为undefined
@@ -19,7 +19,7 @@
 
 	alert(typeof(mes2));//"undefined" 
       
-    ``` 
+
       
 ### Null  
   
