@@ -1,20 +1,8 @@
-## 数据类型
 * 介绍JavaScript的基本数据类型。 
 
 
-   
   
-  ### undefined  
-  
-      ```  
-      	var mes ;//带分号表示已声明未主动初始化,不带分号表示未声明
-	//同var mes = undefined; 默认被动初始化值为undefined
-	alert(mes == undefined);//true;
-	var mes2
-	alert(typeof(mes));//"undefined"
-	alert(typeof(mes2));//"undefined"  
-      
-      ```  
+   
       
   ### Null  
   
