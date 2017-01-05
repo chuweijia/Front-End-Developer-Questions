@@ -107,7 +107,7 @@
 
 ### 数组
 
-    > 栈和队列  
+    >  栈和队列  
     
     		// 队列 push() shift()
 	    	var arr = new Array();
@@ -143,7 +143,7 @@
 		arr.unshift("c");
 		console.log(arr);//["c", "a", "b"] 注意整块移植到头部!!  
 	
-    > 重排序  
+    >  重排序  
     		// sort(sortfunction)
 		// sortFunction
 		// 可选项。是用来确定元素顺序的函数的名称。如果这个参数被省略，那么元素将按照 ASCII字符顺序进行升序排列。
