@@ -103,8 +103,60 @@
 * JavaScript中的作用域与变量声明提升？
 
 * ["1", "2", "3"].map(parseInt) 答案是多少？
-* 数组和对象有哪些原生方法，列举一下？
+* 数组和对象有哪些原生方法，列举一下？  
 
+### 数组
+
+    > 栈和队列  
+    
+    		// 队列 push() shift()
+	    	var arr = new Array();
+		arr.push("a");
+		arr.push("b");
+		arr.push("c");//队列压入
+		console.log(arr);//["a", "b", "c"]
+		arr.shift();//返回头部a 并删除	
+	
+		// 栈 push() pop()
+		var arr = new Array();
+		arr.push("a");
+		arr.push("b");
+		arr.push("c");//栈压入
+		console.log(arr);//["a", "b", "c"]	
+		// 若是如下
+		arr = arr.push("a");
+		console.log(typeof(arr));//number!!!! push的返回值是元素个数
+
+
+        	// unshift（）在数组头部添加 返回数组长度
+		var arr = new Array();
+		arr.unshift("a");
+		arr.unshift("b");
+		arr.unshift("c");//把unshift看做除了入栈 入队列的第三种方“入”
+		console.log(arr);//["c", "b", "a"]
+		arr.pop();//返回尾部值a 并删除
+		console.log(arr);//["c", "b"]
+
+
+		// 若整块unshift()
+		arr.unshift("a","b");
+		arr.unshift("c");
+		console.log(arr);//["c", "a", "b"] 注意整块移植到头部!!  
+	
+    > 重排序  
+    		// sort(sortfunction)
+		// sortFunction
+		// 可选项。是用来确定元素顺序的函数的名称。如果这个参数被省略，那么元素将按照 ASCII字符顺序进行升序排列。
+		// sort 方法将 Array 对象进行适当的排序；在执行过程中并不会创建新的 Array 对象。 
+		// 如果为 sortfunction 参数提供了一个函数，那么该函数必须返回下列值之一： 
+		// 负值，如果所传递的第一个参数比第二个参数小。 
+		// 零，如果两个参数相等。 
+		// 正值，如果第一个参数比第二个参数大。  
+		
+		
+    		
+    
+  
 ## 移动端  
 * 移动端最小触控区域是多大？
 * 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
@@ -122,35 +174,32 @@
   
 * 关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？  
 	
-	```
+	
 		element.addEventListener(type,handler,false);//DOM2 IE9 FF Safari Chrome Opera
 		element.attachEvent("on"+type,handler);//IE Opera 
 		event.preventDefault();//阻止默认行为 当event.cancelable为true时
 		event.stopPropagation();//停止进一步冒泡 当event.cancelable为true时    
-	```
+	
 	
 * 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡，你来说下会执行几次事件，然后会先执行冒泡还是捕获      
 
-  document 往 target节点，`捕获前进`，遇到注册的捕获事件立即触发执行   
-  
-  到达target节点，触发事件（对于target节点上，是先捕获还是先冒泡则捕获事件和冒泡事件的`注册顺序`，先注册先执行）  
-  
-  target节点 往 document 方向，`冒泡前进`，遇到注册的冒泡事件立即触发  
+	  document 往 target节点，`捕获前进`，遇到注册的捕获事件立即触发执行   
+
+	  到达target节点，触发事件（对于target节点上，是先捕获还是先冒泡则捕获事件和冒泡事件的`注册顺序`，先注册先执行）  
+
+	  target节点 往 document 方向，`冒泡前进`，遇到注册的冒泡事件立即触发  
   
   举个例子  
- 
   
-  ```  
-    <ul id="ul">
-      <li id="li">
-      123
-      <a href="#" id="a">aaa</a>
-      </li>
-      <li>456</li>
-      <li>789</li>
-      123
-    </ul>    
-  ```  
+	    <ul id="ul">
+	      <li id="li">
+	      123
+	      <a href="#" id="a">aaa</a>
+	      </li>
+	      <li>456</li>
+	      <li>789</li>
+	      123
+	    </ul>    
   点击a 触发顺序 `ul捕获 li捕获 a捕获 a冒泡（a的注册顺序） li冒泡 ul冒泡`  
   
   
