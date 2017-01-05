@@ -87,42 +87,40 @@
 * 什么是window对象? 什么是document对象?   
 ### window  
 
-	  定义：BOM（浏览器对象模型）的核心对象   
-	       表示浏览器的一个实例   
-	       是接口,js访问浏览器时候  
-	       是Global对象,ECMAScript规定的,所以有权全局访问方法和属性  
-       	  
-      
-      
-      	  var age = 10;
-	  window.color:red;
-	  delete window.age;//能获取  无法删除
-  	  delete window.color;//能获取  能删除 delete可以删除直接定义在window上的对象  
+		  定义：BOM（浏览器对象模型）的核心对象   
+		       表示浏览器的一个实例   
+		       是接口,js访问浏览器时候  
+		       是Global对象,ECMAScript规定的,所以有权全局访问方法和属性  
+
+
+
+		  var age = 10;
+		  window.color:red;
+		  delete window.age;//能获取  无法删除
+		  delete window.color;//能获取  能删除 delete可以删除直接定义在window上的对象  
 	  
 	  
        
   
   ![image](http://7xsk2q.com1.z0.glb.clouddn.com/JS/bower.png)  
   		
-	  window.screenLeft/screenTop ; 表示窗口相对于屏幕的左/上的位置	
-	  window.innerWidth含滚动条宽度
-	  标准模式(且IE6必须保证是标准)：document.documentElement.clientWidth 可以取得视口大小  
-	  混杂模式：document.documentElement.clientWidth 可以取得视口大小 (chrome混杂模式两种都可取得)   
+		  window.screenLeft/screenTop ; 表示窗口相对于屏幕的左/上的位置
+		  window.innerWidth含滚动条宽度
+		  标准模式(且IE6必须保证是标准)：document.documentElement.clientWidth 可以取得视口大小  
+		  混杂模式：document.documentElement.clientWidth 可以取得视口大小 (chrome混杂模式两种都可取得)   
   
   
   
  
 ### document  
 
-	定义：JS通过Document类型表示文档
-	      在浏览器中,是HTMLDocument(继承自Document类型)的一个实例 表示整个HTML页面
-	      document对象是window对象的一个属性,可作为为全局对象访问
-	      
-	      
-      
-	DOM(文档对象模型)是针对HTML和XML文档的一个API(应用程序编程接口),可将其描绘成由多层节点构成的结构  
-	Node.ELEMENT_NODE(1) //Node类型 node.nodeType == 1
-	Node.DOCUMENT_NODE(9) //document类型 node.nodeType == 9  
+		定义：JS通过Document类型表示文档
+		      在浏览器中,是HTMLDocument(继承自Document类型)的一个实例 表示整个HTML页面
+		      document对象是window对象的一个属性,可作为为全局对象访问
+	       
+		DOM(文档对象模型)是针对HTML和XML文档的一个API(应用程序编程接口),可将其描绘成由多层节点构成的结构  
+		Node.ELEMENT_NODE(1) //Node类型 node.nodeType == 1
+		Node.DOCUMENT_NODE(9) //document类型 node.nodeType == 9  
 	
 	
 * null，undefined的区别？  
