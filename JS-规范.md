@@ -86,14 +86,14 @@
 * Javascript创建对象的几种方式？
 * 什么是window对象? 什么是document对象?
 * null，undefined的区别？  
-	```  
+	 
 	  var mes = null;//null值表示一个空对象指针！！  
 	  var mes = undefined; //默认被动初始化值为undefined   
 	  var mes2 //未声明  
 	  alert(typeof(mes));//"undefined"  
 	  alert(typeof(mes2));//"undefined"  
 	  alert(typeof(mes));//"object" 据说这是一个bug  
-	```  
+	
 
 	
 	
@@ -107,7 +107,7 @@
 
 ### 数组
 
-    >  栈和队列  
+>  栈和队列  
     
     		// 队列 push() shift()
 	    	var arr = new Array();
@@ -143,15 +143,125 @@
 		arr.unshift("c");
 		console.log(arr);//["c", "a", "b"] 注意整块移植到头部!!  
 	
-    >  重排序  
-    		// sort(sortfunction)
-		// sortFunction
-		// 可选项。是用来确定元素顺序的函数的名称。如果这个参数被省略，那么元素将按照 ASCII字符顺序进行升序排列。
-		// sort 方法将 Array 对象进行适当的排序；在执行过程中并不会创建新的 Array 对象。 
-		// 如果为 sortfunction 参数提供了一个函数，那么该函数必须返回下列值之一： 
-		// 负值，如果所传递的第一个参数比第二个参数小。 
-		// 零，如果两个参数相等。 
-		// 正值，如果第一个参数比第二个参数大。  
+>  重排序  
+
+    		sort(sortfunction)
+		sortFunction
+		可选项。是用来确定元素顺序的函数的名称。如果这个参数被省略，那么元素将按照 ASCII字符顺序进行升序排列。
+		sort 方法将 Array 对象进行适当的排序；在执行过程中并不会创建新的 Array 对象。 
+		如果为 sortfunction 参数提供了一个函数，那么该函数必须返回下列值之一： 
+		负值，如果所传递的第一个参数比第二个参数小。 
+		零，如果两个参数相等。 
+		正值，如果第一个参数比第二个参数大。    
+		
+		
+		var values = ["A","3"];
+		values.sort();
+		console.log(values);//["3", "A"]
+
+		//优先比较第一位 第一位一样比较第二位**  
+
+		var values = ["1A","3"];
+		values.sort();
+		console.log(values);//["1A", "3"]
+		var values = ["A1","3"];
+		values.sort();
+		console.log(values);//["3", "A1"]
+
+		//根据上述 所以此时的排序会出现bug 于是我们需要加一个函数来消除bug
+
+		function up(e1,e2){//升序
+			//return e1-e2;
+			if(e1<e2) {
+				return -1;//应该是sort()的特定属性
+			}else if(e1>e2) {
+				return 1;
+			}else {
+				return 0;
+			} 
+		}
+		function down(e1,e2){//降序
+			//return e2-e1;
+			if(e1<e2) {
+				return 1;
+			}else if(e1>e2) {
+				return -1;
+			}else {
+				return 0;
+			} 
+		}
+		var values = [0,1,5,10,15];
+		values.sort();
+		console.log(values);//[0, 1, 10, 15, 5] 出问题了！
+		values.sort(up);
+		console.log(values);//[0, 1, 5, 10, 15] 
+		values.sort(down);
+		console.log(values);//[15, 10, 5, 1, 0] 
+		//reverse()反转顺序 并不是进行了值的比较！！
+		values.reverse();
+		console.log(values);//[15, 10, 5, 1, 0]   
+		
+>  数组的增删改  
+
+		// concat() 连接的意思 
+		// concat()会基于原数组创建一个数组的副本 
+		var values = ["a","b","c","d"];
+		values.concat("new");
+		console.log(values);//["a", "b", "c", "d"]
+		var values = ["a","b","c","d"];
+		var nvalues = values.concat("new");
+		console.log(nvalues);//["a", "b", "c", "d","new"]
+
+		// slice() 切片的意思 返回被切下来的数组
+		// slice()会基于原数组创建一个新数组 且不会影响原数组！！
+		var values = ["a","b","c","d"];
+		values.slice(1,2);  //相当于取的索引是[1,2) 若只有一个参数 例则[0,values.length)取得全部元素
+		console.log(values);//["a", "b", "c", "d"]
+		var values = ["a","b","c","d"];
+		var nvalues = values.slice(1,2);
+		console.log(nvalues);//["b"]
+
+		// splice(起始位置,要删除的项数,要插入的项目们)
+		// 其中第二个参数不包括其本身！！
+		// splice()返回被删除的项目们
+		var values = ["a","b","c","d"];
+		values.splice(1,2,"b1","c1");
+		console.log(values);//["a", "b1", "c1", "d"]  
+		
+>  数组的索引位置    
+
+		// indexof() lastindexof() 返回要查找的值的索引 第二个参数是查找起点(可选) 无则返回-1
+		var values = ["a","b","c","d"];
+		var ind = values.indexOf("c",1);
+		console.log(ind);//2   
+		
+		
+>  数组的迭代    
+
+		var values = ["a","b","c","d"];
+		values.forEach(function(item,index,array){//结果应该是最后一次的
+		console.log(item);//a b c d
+		console.log(index);//0 1 2 3 
+		console.log(item);
+		//["a", "b", "c", "d"]
+			//["a", "b", "c", "d"]
+			//["a", "b", "c", "d"]
+			//["a", "b", "c", "d"]
+		},this);
+		console.log(this);//window 对象
+		var values = ["a","b","c","d"];
+		for(item in values){//遍历出了每一次的结果 同上对比
+			console.log(item);// 0 1 2 3
+		}
+		
+### 对象  
+
+
+
+		
+		
+		
+
 		
 		
     		
