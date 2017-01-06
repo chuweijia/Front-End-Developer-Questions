@@ -125,12 +125,12 @@
 	
 * null，undefined的区别？  
 	 
-	  var mes = null;//null值表示一个空对象指针！！  
-	  var mes = undefined; //默认被动初始化值为undefined   
-	  var mes2 //未声明  
-	  alert(typeof(mes));//"undefined"  
-	  alert(typeof(mes2));//"undefined"  
-	  alert(typeof(mes));//"object" 据说这是一个bug  
+		  var mes = null;//null值表示一个空对象指针！！  
+		  var mes = undefined; //默认被动初始化值为undefined   
+		  var mes2 //未声明  
+		  alert(typeof(mes));//"undefined"  
+		  alert(typeof(mes2));//"undefined"  
+		  alert(typeof(mes));//"object" 据说这是一个bug  
 	
 
 	
@@ -138,13 +138,13 @@
 * javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
 * documen.write和 innerHTML的区别?  
 
-	   document.write是直接写入到页面的内容流，如果在写之前没有调用document.open, 浏览器会自动调用open。每次写完关闭之后重新调		  用该函数，会导致页面被重写。
-	   innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。如果想修改document的   	      内容，则需要修改document.documentElement.innerElement。
-	   innerHTML将内容写入某个DOM节点，不会导致页面全部重绘
-	   innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。  
-	   
-	   document.write  页面全部绘制  
-	   innerHTML 页面局部绘制  
+		   document.write是直接写入到页面的内容流，如果在写之前没有调用document.open, 浏览器会自动调用open。每次写完关闭之后重新调		  用该函数，会导致页面被重写。
+		   innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。如果想修改document的   	      内容，则需要修改document.documentElement.innerElement。
+		   innerHTML将内容写入某个DOM节点，不会导致页面全部重绘
+		   innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。  
+
+		   document.write  页面全部绘制  
+		   innerHTML 页面局部绘制  
 	   
   ![image](http://7xsk2q.com1.z0.glb.clouddn.com/inner.gif)  
   
