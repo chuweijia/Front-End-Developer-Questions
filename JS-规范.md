@@ -149,20 +149,20 @@
   ![image](http://7xsk2q.com1.z0.glb.clouddn.com/inner.gif)  
   
 * DOM操作——怎样添加、移除、移动、复制、创建和查找节点?    
-  ### 添加：
+### 添加：
 	  someNode.appendChild(newNode);//表示在整个childNodes结尾添加节点,如果newNode已存在 仅表示移位置,返回值为新增的节点  
   	  someNode.insertBefore(newNode,Node);//第二个参数是被参照节点可NULL 
 	  someNode.replaceChild(newNode,someNode.firstChild);//newNode替换了firstChild  
-  ### 移除：
+### 移除：
   	  someNode.removeChild(newNode);
-  ### 复制：
+### 复制：
   	  someNode.cloneNode(true);//深复制 包括副本和其所有子节点
  	  someNode.cloneNode(false);//浅复制 包括副本 成为孤儿  
-  ### 创建：
+### 创建：
   	  document.createElement("div");//尚未添加到文档树中 不会影响浏览器的显示！
 	  document.body.appendChild();//这样就添加到文档树中了！
 	  document.createElement("<div id=\"id1\" class=\"class1\"></div>");//直接添加  
-  ### 查找：
+### 查找：
   	  someNode.nextSibling;
 	  someNode.previousSibling;
 	  someNode.parentNode;
