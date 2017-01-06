@@ -136,8 +136,47 @@
 	
 	
 * javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
-* documen.write和 innerHTML的区别?
-* DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+* documen.write和 innerHTML的区别?  
+
+	   document.write是直接写入到页面的内容流，如果在写之前没有调用document.open, 浏览器会自动调用open。每次写完关闭之后重新调		  用该函数，会导致页面被重写。
+	   innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。如果想修改document的   	      内容，则需要修改document.documentElement.innerElement。
+	   innerHTML将内容写入某个DOM节点，不会导致页面全部重绘
+	   innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。  
+	   
+	   document.write  页面全部绘制  
+	   innerHTML 页面局部绘制  
+	   
+  ![image](http://7xsk2q.com1.z0.glb.clouddn.com/inner.gif)  
+  
+* DOM操作——怎样添加、移除、移动、复制、创建和查找节点?    
+  ### 添加：
+	  someNode.appendChild(newNode);//表示在整个childNodes结尾添加节点,如果newNode已存在 仅表示移位置,返回值为新增的节点  
+  	  someNode.insertBefore(newNode,Node);//第二个参数是被参照节点可NULL 
+	  someNode.replaceChild(newNode,someNode.firstChild);//newNode替换了firstChild  
+  ### 移除：
+  	  someNode.removeChild(newNode);
+  ### 复制：
+  	  someNode.cloneNode(true);//深复制 包括副本和其所有子节点
+ 	  someNode.cloneNode(false);//浅复制 包括副本 成为孤儿  
+  ### 创建：
+  	  document.createElement("div");//尚未添加到文档树中 不会影响浏览器的显示！
+	  document.body.appendChild();//这样就添加到文档树中了！
+	  document.createElement("<div id=\"id1\" class=\"class1\"></div>");//直接添加  
+  ### 查找：
+  	  someNode.nextSibling;
+	  someNode.previousSibling;
+	  someNode.parentNode;
+	  someNode.firstChild;
+	  someNode.lastChild;
+  	
+  	  document.getElementById("id");
+	  document.getElementsByTagName("li");
+	  document.querySelector("#id");//选择第一个#id的元素
+  	  document.querySelectorAll("p strong");//选择全部p下的strong  
+	  
+	  
+	  firstElementChild是它的元素版/previousElementChild/childElementCount(返回子元素且不含文本节点和注释的个数)/parentElement
+ 
 * JavaScript中的作用域与变量声明提升？
 
 * ["1", "2", "3"].map(parseInt) 答案是多少？
