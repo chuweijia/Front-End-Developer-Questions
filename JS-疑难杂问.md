@@ -48,4 +48,24 @@ ECMAScript6 怎么写class么，为什么会出现class这种东西?
 那些操作会造成内存泄漏？  
 * 用原生JavaScript的实现过什么功能吗？  
 Node.js的适用场景？  
-* Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
+* Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？  
+
+
+
+
+
+*  AJAX  
+ ![image](http://7xsk2q.com1.z0.glb.clouddn.com/headers.png)    
+ 
+ 
+ XHR对象  
+ 1.xhr.open("get","example.php",false)  //是否异步 false 否  
+ 2.xhr.send(null) //请求被分派到服务器  
+ 3.相应的数据会自动填充xhr对象的属性   
+   reponseText  
+   reponseXML  
+   status  
+   statusText  
+   
+ 
+ 
