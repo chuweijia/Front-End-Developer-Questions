@@ -1,4 +1,5 @@
-* 如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？  
+*  如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？  
+
 ### 水平垂直居中（css3）  
 
 >  绝对定位    
@@ -130,4 +131,48 @@
      使用`static` 定位或`无position`定位的元素z-index属性是无效的  
      
      
-     
+*  左边小竖条的实现方法  
+
+            div::after{ ／／伪元素
+                content:"";
+                width:5px;
+                height:60px;
+                position:absolute;
+                top:0;
+                left:0;
+                background:deeppink;
+            }
+
+            div{
+             position:relative;
+             width:200px;
+             height:60px;
+             background:#ddd;
+             /*background-image:linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 5px);或者如下*/
+             background-image:linear-gradient(to right, deeppink 0px, deeppink 5px, transparent 5px);
+         }
+
+
+        div{
+            box-shadow: inset 5px 0px 0 0 deeppink;
+            //box-shadow: -5px 0px 0 0 deeppink;
+        }  
+        
+        
+        这个用的比较少，outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。这个方法算是下下之选。
+
+         div{
+             height:50px;
+             outline:5px solid deeppink;
+         }
+         div{
+             position:absolute;
+             content:"";
+             top:-5px;
+             bottom:-5px;
+             right:-5px;
+             left:0;
+             background:#ddd;
+         }  
+         
+         
