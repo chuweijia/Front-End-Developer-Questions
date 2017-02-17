@@ -1,4 +1,4 @@
-* CSS选择符有哪些？哪些属性可以继承？  
+* CSS选择符有哪些？  
 **1.基本选择器**  
 `*`  
 `p`  
@@ -58,6 +58,26 @@ E:target	匹配文档中特定"id"点击后的效果
 ```  
 
 
+* 哪些属性可以继承？  
+**1.可继承的样式**  
+字体：`font`、`color`、`font-family`、`font-size（继承计算后的值）`、font-size-adjust、font-stretch 、font-style 、font-style 、text-underline-position 、font-variant 、 text-transform `line-height`、`letter-spacing` 、word-spacing  
+文本：`text-indent` 、`text-align` 、layout-flow 、writing-mode 、white-space 、`word-wrap` 、text-kashida-space 、layout-grid 、layout-grid-char 、layout-grid-char-spacing 、layout-grid-line 、layout-grid-mode 、layout-grid-type  
+列表：`list-style` 、list-style-image 、list-style-position 、list-style-type  
+表格：`border-collapse` 、border-spacing 、caption-side 、empty-cells 、table-layout 、speak-header  
+
+**2.不可继承的样式**  
+字体：text-decoration 、`text-shadow`  
+文本：text-overflow 、`vertical-align` 、direction、unicode-bidi 、`word-break` 、line-break 、text-autospace、`text-justify` 、ruby-align 、ruby-overhang 、ruby-position 、ime-mode  
+背景：`background`  
+定位：`position 、z-index 、top、right 、bottom 、left `   
+尺寸：`height 、max-height 、min-height 、width、max-width 、min-width`  
+布局：clear 、`float`、clip 、`overflow`、`display`、`visibility`  
+外补丁：`margin`  
+内补丁：`padding`   
+轮廓：`outline`  
+边框：`border`  
+列表：marker-offset   
+其他：`cursor`、`zoom`  
 
 * CSS优先级算法如何计算？ 
 权重  
