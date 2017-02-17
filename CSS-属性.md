@@ -1,7 +1,69 @@
-* CSS选择符有哪些？哪些属性可以继承？
+* CSS选择符有哪些？哪些属性可以继承？  
+**1.基本选择器**  
+`*`  
+`p`  
+`.`  
+`#`  
+`p,ul`  
+`p ul`  
+`p > ul`  
+`p + ul` `p ~ ul`(css3)  
+**2.属性选择器**  
+`以下所有 都可以只保留到[]写法`  
+`p[title]`  
+`div[class=error]`  
+`td[headers~=col1]`  值col1是 headers属性下用空格分割的众多值中的一个  
+`p[lang|=en]`  匹配lang属性的值，这个值以en开头。比如 `<p lang="en-us">Hi!</p>` 
+**3.css2.1中的伪类**  
+`p:first-child` 只有当该元素为其父元素的第一个孩子时才会被匹配，即该元素之前没有兄弟节点  
+`E:lang(c)` 匹配lang属性等于c的E元素  
+
+`a:link`  
+`a:hover` 先
+`input:focus` 后 比如 input必须保证点击一下 才能获取焦点  
+`a:active` 鼠标按下未抬起时 即点按激活时  
+`a:visited` 已被访问过的  
+**3.css2.1中的伪元素  （貌似伪元素规定用双冒号表示 但是由于兼容性 选择了单引号）**    
+`p:first-line` p的第一行元素  
+`p:first-letter` p的第一个元素   
+`p:before`  
+`p:after`  
+
+**4.css3基本选择器**  
+`p ~ ul`  
+`div[class^="nav"]`class以nav开头  
+`div[class$="nav"]`class以nav结尾  
+`div[class*="nav"]`class中包含nav的   
+
+**5.css3与用户界面有关的伪类**  
+`input:enabled`  表单中激活的元素  
+`input:disabled` 表单中禁用的元素  
+`.radio:checked`  
+`input::selection` 匹配用户当前选中的元素  
+
+**6.css3与结构性的伪类**    
+
+```
+p:nth-child(3) { color:#f00; }
+p:nth-child(odd) { color:#f00; }
+p:nth-child(even) { color:#f00; }
+p:nth-child(3n+0) { color:#f00; }
+p:nth-child(3n) { color:#f00; }
+tr:nth-child(2n+11) { background:#ff0; }
+tr:nth-last-child(2) { background:#ff0; }
+p:last-child { background:#ff0; }
+p:only-child { background:#ff0; }
+p:empty { background:#ff0; }
+:not(p)  
+E:target	匹配文档中特定"id"点击后的效果
+```  
+
+
+
 * CSS优先级算法如何计算？ 
-权重
-!important > style(1000) > #id(100) > .class(10) >　div(1)
+权重  
+
+      !important > style(1000) > #id(100) > .class(10) >　div(1)
 * CSS3新增伪类有那些？  
  **伪类**
  `p ~ ul`p之后的所有ul亲兄弟  
@@ -54,11 +116,12 @@
    
   
   
-  `:link`(css1)  未被访问过
-  `:hover`(css1)   悬停
-  `:visited`(css1)  已访问过
-  `:active`(css1)  被点击时  
-   激活顺序（一般-->特殊）`link - visited - hover - focus(鼠标松开) - active`  
+  `:link`(css2)  未被访问过
+  `:hover`(css2)   悬停
+  `:focus`(css2)   获得焦点 比如input元素得在点击后获取焦点  
+  `:active`(css2)  被点击鼠标未抬起   
+  `:visited`(css2)  已访问过
+   激活顺序（一般-->特殊）`link - visited - hover - focus(鼠标松开) - active`  
   `:target`用法#news:target  
   
    **伪元素**  
