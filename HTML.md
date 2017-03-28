@@ -59,31 +59,33 @@ HTML5的离线储存怎么使用，工作原理能不能解释一下？
 实现不使用 border 画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。
 
 * HTML XHTML XML解释 
-        1.SGML（标准通用标记语言）是一个标准，告诉我们怎么去指定文档标记。
-        2.html即是超文本标记语言（Hyper Text Markup Language）规范不是很好，大小写混写且编码不规范；
-        3.xhtml即是升级版的html（Extensible Hyper Text Markup Language），一种过渡语言，html向xml过渡的语言；
-        4.xml即时可扩展标记语言（Extensible Markup Language），是一种跨平台语言，XML 被设计用来传输和存储数据。
-        5.html>>xhtml>>xml 
-        6.关系
-           -SGML
-              -HTML
-            -XML -XHTML
+```markdown
+	1.SGML（标准通用标记语言）是一个标准，告诉我们怎么去指定文档标记。
+	2.html即是超文本标记语言（Hyper Text Markup Language）规范不是很好，大小写混写且编码不规范；
+	3.xhtml即是升级版的html（Extensible Hyper Text Markup Language），一种过渡语言，html向xml过渡的语言；
+	4.xml即时可扩展标记语言（Extensible Markup Language），是一种跨平台语言，XML 被设计用来传输和存储数据。
+	5.html>>xhtml>>xml 
+	6.关系
+	   -SGML
+	      -HTML
+	    -XML -XHTML
+```
 * doctype
-	    -作用 doctype声明指出阅读程序应该用什么规则集来解释文档中的标记
-	          -规则 W3C所发布的一个文档类型定义（DTD）中包含的规则
-	          
-	    -结构 
-	          -语法 HTML 顶级元素 可用性 "注册//组织//类型 标签//定义 语言""URL"
-	          		-顶级元素 指定 DTD 中声明的顶级元素类型 HTML 默认
-	          		-可用性 指定正式公开标识符(FPI)是可公开访问的对象还是系统资源。 PUBLIC 默认
-	          		-注册 指定组织（w3c）是否由国际标准化组织(ISO)注册。 + 默认 组织名称已注册;- 组织名称未注册
-	          		-组织 由!DOCTYPE 声明引用的 DTD 的创建和维护的团体或组织的名称（w3c）
-	          		-类型 指定公开文本类，即所引用的对象类型。 DTD 默认。DTD。
-	          		-标签 指定公开文本描述，后面可附带版本号。 HTML 默认。
-	          		-定义 指定文档类型定义,Frameset 框架集文档。Transitional 包含除 frameSet 元素的全部内容。/Strict
-	          		-语言  EN 默认。英语。
-	          		-URL 指定所引用对象的位置。
-	    -模式
+```markdown
+    **作用** doctype声明指出阅读程序应该用什么规则集来解释文档中的标记
+    **规则** W3C所发布的一个文档类型定义（DTD）中包含的规则     
+    **结构** 
+	  -语法 HTML 顶级元素 可用性 "注册//组织//类型 标签//定义 语言""URL"
+		    -顶级元素 指定 DTD 中声明的顶级元素类型 HTML 默认
+		    -可用性 指定正式公开标识符(FPI)是可公开访问的对象还是系统资源。 PUBLIC 默认
+		    -注册 指定组织（w3c）是否由国际标准化组织(ISO)注册。 + 默认 组织名称已注册;- 组织名称未注册
+		    -组织 由!DOCTYPE 声明引用的 DTD 的创建和维护的团体或组织的名称（w3c）
+		    -类型 指定公开文本类，即所引用的对象类型。 DTD 默认。DTD。
+		    -标签 指定公开文本描述，后面可附带版本号。 HTML 默认。
+		    -定义 指定文档类型定义,Frameset 框架集文档。Transitional 包含除 frameSet 元素的全部内容。/Strict
+		    -语言  EN 默认。英语。
+		    -URL 指定所引用对象的位置。
+     **模式**
 	    	  -标准模式Standards 
 	    	  		-概念 览器以其支持的最高标准呈现页面
 	    	  		-例子 如果XHTML、HTML 4.01文档包含形式完整的DOCTYPE;包含过渡DTD和URI的DOCTYPE
@@ -91,22 +93,25 @@ HTML5的离线储存怎么使用，工作原理能不能解释一下？
 	    	  		-概念 览器以其支持的最高标准呈现页面
 	    	  		-例子 如果XHTML、HTML 4.01文档包含形式完整的DOCTYPE;有过渡DTD而没有URI;DOCTYPE不存在或形式不正确
 	    	  -特殊
-					-HTML5 
-		 	  			-特性 不基于SGML，因此不需要对DTD进行引用（也就没有严格模式与宽松模式的区别）但是需要doctype来规范浏览器的行为
-
+				-HTML5 
+		 	  	-特性 不基于SGML，因此不需要对DTD进行引用（也就没有严格模式与宽松模式的区别）但是需要doctype来规范浏览器的行为
+						
+```
 * 行块空元素
-			  -种类
-			   		-行 a span img br(换行)
-			   			input label textarea select(项目选择)
-			   			em(强调) strong b(加粗) font i(斜体) big small u(下划线) 
-			   			sub sup(下标) abbr(缩写) cite(引用) code (计算机代码 在引用源码的时候需要)
+```markdown
+  -种类
+	**行**   a span img br(换行)
+		 input label textarea select(项目选择)
+		 em(强调) strong b(加粗) font i(斜体) big small u(下划线) 
+		 sub sup(下标) abbr(缩写) cite(引用) code (计算机代码 在引用源码的时候需要)
 
 
-			   		-块 div p ul ol li h1 hr(水平分割线) blockquote
-			   			table thead tbody tfoot tr th td dl(一个定义列表) dt dd form fieldset 
-			   			address center(居中对齐块) menu(菜单列表) pre(格式化文本) dir(目录列表)
+	**块**   div p ul ol li h1 hr(水平分割线) blockquote
+		 table thead tbody tfoot tr th td dl(一个定义列表) dt dd form fieldset 
+		 address center(居中对齐块) menu(菜单列表) pre(格式化文本) dir(目录列表)
 
-			   		-空 img input meta link 
+	**空**   img input meta link 
+```
 * html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？   
       HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
       绘画 canvas;
